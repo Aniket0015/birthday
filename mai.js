@@ -1,4 +1,4 @@
-const endDate= "27 June 2024 0:00 am";
+const endDate= "27 June 2024 0:0 am";
 
 const input = document.querySelectorAll("input");
 
@@ -8,6 +8,7 @@ function clock(){
     const now= new Date();
     const diff= (end-now)/1000;
     if(diff<0){
+        window.location.href="wish.html";
         return;
     }
     input[0].value= Math.floor( diff/3600/24);
